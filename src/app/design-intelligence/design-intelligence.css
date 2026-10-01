@@ -1,0 +1,15 @@
+/*
+ * Everything else on this page is plain Tailwind using the site's
+ * existing type scale (h1/h2/h3, p, label-eyebrow) and color tokens —
+ * this file only holds what utility classes can't express: the
+ * crossfade between the 4 stacked specification renders.
+ */
+.di-model-img {
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.di-model-img.di-model-img--active {
+  opacity: 1;
+  transform: scale(1);
+}

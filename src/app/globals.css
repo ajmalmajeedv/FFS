@@ -1,0 +1,349 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-heading: var(--font-serif);
+
+  /* FFS brand ramp — sampled from fluidformstudio.com, kept as raw
+     literal tokens so marketing sections can reach for an exact step
+     without going through the semantic (primary/accent) aliases. */
+  --color-brand-green-900: var(--brand-green-900);
+  --color-brand-green-700: var(--brand-green-700);
+  --color-brand-green-500: var(--brand-green-500);
+  --color-brand-green-300: var(--brand-green-300);
+  --color-brand-green-100: var(--brand-green-100);
+  --color-brand-terracotta-700: var(--brand-terracotta-700);
+  --color-brand-terracotta-500: var(--brand-terracotta-500);
+  --color-brand-terracotta-100: var(--brand-terracotta-100);
+  --color-brand-black: var(--brand-black);
+  --color-brand-white: var(--brand-white);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) + 2px);
+  --radius-md: calc(var(--radius) + 4px);
+  --radius-lg: calc(var(--radius) + 6px);
+  --radius-xl: calc(var(--radius) + 10px);
+  --radius-2xl: calc(var(--radius) + 14px);
+  --radius-3xl: calc(var(--radius) + 18px);
+  --radius-4xl: calc(var(--radius) + 22px);
+}
+
+:root {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
+
+  /*
+   * Palette mix, by intended screen coverage — a compositional rule,
+   * not just a set of tokens. Hold to this when building sections:
+   *   70% white / off-white  — background, negative space
+   *   20% green              — structure: nav, dividers, headings
+   *                            accents, tags, primary buttons
+   *    8% black              — body text, and full dark sections
+   *                            (hero overlay, footer) used sparingly
+   *    3% terracotta         — a single spark per view: one CTA,
+   *                            one tag, one accent line — never a
+   *                            large fill, never paired with green
+   *                            in the same element
+   */
+
+  /* Brand literals — do not rename per-mode, these are fixed points. */
+  --brand-green-900: #1f3d18;
+  --brand-green-700: #3c6e28;
+  --brand-green-500: #3c7832;
+  --brand-green-300: #5a9e3c;
+  --brand-green-100: #cfe3b8;
+  --brand-terracotta-700: #8b4a2a;
+  --brand-terracotta-500: #b5643a;
+  --brand-terracotta-100: #ecd9c9;
+  --brand-black: #141310;
+  --brand-white: #ffffff;
+
+  --highlight: var(--brand-terracotta-500);
+  --highlight-foreground: var(--brand-white);
+
+  /* Architectural: square corners by default. Only small interactive
+     controls (buttons, inputs) round up via --radius-sm. */
+  --radius: 0rem;
+
+  --background: var(--brand-white);
+  --foreground: var(--brand-black);
+  --card: var(--brand-white);
+  --card-foreground: var(--brand-black);
+  --popover: var(--brand-white);
+  --popover-foreground: var(--brand-black);
+
+  --primary: var(--brand-green-500);
+  --primary-foreground: var(--brand-white);
+  --secondary: var(--brand-black);
+  --secondary-foreground: var(--brand-white);
+
+  --muted: #f5f3ee;
+  --muted-foreground: #6b6860;
+  --accent: #eff5ec;
+  --accent-foreground: var(--brand-green-900);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e4e1d9;
+  --input: #e4e1d9;
+  --ring: var(--brand-green-500);
+
+  --chart-1: var(--brand-green-500);
+  --chart-2: var(--brand-green-300);
+  --chart-3: var(--brand-green-700);
+  --chart-4: var(--brand-green-100);
+  --chart-5: var(--brand-black);
+
+  --sidebar: var(--brand-white);
+  --sidebar-foreground: var(--brand-black);
+  --sidebar-primary: var(--brand-green-500);
+  --sidebar-primary-foreground: var(--brand-white);
+  --sidebar-accent: #eff5ec;
+  --sidebar-accent-foreground: var(--brand-green-900);
+  --sidebar-border: #e4e1d9;
+  --sidebar-ring: var(--brand-green-500);
+}
+
+.dark {
+  --highlight: var(--brand-terracotta-500);
+  --highlight-foreground: var(--brand-white);
+
+  --background: #0f0f0d;
+  --foreground: #f7f5f0;
+  --card: #171713;
+  --card-foreground: #f7f5f0;
+  --popover: #171713;
+  --popover-foreground: #f7f5f0;
+
+  --primary: var(--brand-green-300);
+  --primary-foreground: #0f0f0d;
+  --secondary: #f7f5f0;
+  --secondary-foreground: #0f0f0d;
+
+  --muted: #1c1c18;
+  --muted-foreground: #9a9690;
+  --accent: #1f2e1a;
+  --accent-foreground: var(--brand-green-100);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: var(--brand-green-300);
+
+  --chart-1: var(--brand-green-300);
+  --chart-2: var(--brand-green-500);
+  --chart-3: var(--brand-green-700);
+  --chart-4: var(--brand-green-100);
+  --chart-5: #f7f5f0;
+
+  --sidebar: #171713;
+  --sidebar-foreground: #f7f5f0;
+  --sidebar-primary: var(--brand-green-300);
+  --sidebar-primary-foreground: #0f0f0d;
+  --sidebar-accent: #1f2e1a;
+  --sidebar-accent-foreground: var(--brand-green-100);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--brand-green-300);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+
+  /* One typographic voice for every heading in the app — sections
+     reach for h1/h2/h3 and inherit the right size instead of hand
+     -picking text-* + tracking-* + font-* each time. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-normal tracking-tight text-balance;
+  }
+  h1 {
+    @apply text-5xl leading-[1.05] md:text-7xl;
+  }
+  h2 {
+    @apply text-4xl leading-[1.1] md:text-5xl;
+  }
+  h3 {
+    @apply text-2xl leading-tight md:text-3xl;
+  }
+  h4 {
+    @apply text-xl leading-snug md:text-2xl;
+  }
+  p {
+    @apply text-base leading-relaxed text-pretty md:text-lg;
+  }
+
+  /* A single small-caps "eyebrow" label style — the only place a
+     small font size is allowed, per the no-tiny-text rule. */
+  .label-eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground;
+  }
+}
+
+@keyframes hero-pan {
+  0% {
+    transform: scale(1.15) translateX(-3.5%);
+  }
+  100% {
+    transform: scale(1.15) translateX(3.5%);
+  }
+}
+
+@keyframes hero-bg-cycle {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Three stacked backgrounds cycle Header 1 -> 2 -> 3 -> repeat, each
+   panning independently. Both animations are listed on one shorthand
+   (not split across classes) so neither silently overrides the other;
+   only the second (per-layer) delay staggers the crossfade timing. */
+.hero-bg-layer {
+  opacity: 0;
+  animation:
+    hero-pan 26s ease-in-out infinite alternate,
+    hero-bg-cycle 21s ease-in-out infinite;
+}
+
+.hero-bg-layer:nth-of-type(1) {
+  animation-delay: 0s, 0s;
+}
+.hero-bg-layer:nth-of-type(2) {
+  animation-delay: 0s, 7s;
+}
+.hero-bg-layer:nth-of-type(3) {
+  animation-delay: 0s, 14s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-layer {
+    animation: none;
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  .hero-bg-layer:first-of-type {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-logo-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-logo-fade-in {
+  opacity: 0;
+  animation: hero-logo-fade-in 2.4s ease-out 0.4s forwards;
+}
+
+@keyframes scroll-cue-float {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.scroll-cue {
+  animation: scroll-cue-float 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+  .scroll-cue {
+    animation: none;
+  }
+}
+
+@keyframes marquee-loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-loop 36s linear infinite;
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}

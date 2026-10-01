@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "residential-podium",
+    "title": "Residential Podium",
+    "image": "/images/typologies/residential-podium.d0e32a29.webp"
+  },
+  {
+    "slug": "master-planning",
+    "title": "Master Planning",
+    "image": "/images/typologies/master-planning.f7166ef2.webp"
+  },
+  {
+    "slug": "streetscape-public-realm",
+    "title": "Streetscape & Public Realm",
+    "image": "/images/typologies/streetscape-public-realm.b8342b39.webp"
+  },
+  {
+    "slug": "campus-institutional",
+    "title": "Campus & Institutional",
+    "image": "/images/typologies/campus-institutional.6a35f9c9.webp"
+  }
+]

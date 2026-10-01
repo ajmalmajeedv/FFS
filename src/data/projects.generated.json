@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "rise-by-athlon",
+    "title": "Rise By Athlon",
+    "cover": "/projects/rise-by-athlon/cover.webp",
+    "images": [
+      "/projects/rise-by-athlon/01.webp",
+      "/projects/rise-by-athlon/02.webp",
+      "/projects/rise-by-athlon/03.webp",
+      "/projects/rise-by-athlon/04.webp",
+      "/projects/rise-by-athlon/05.webp",
+      "/projects/rise-by-athlon/06.webp",
+      "/projects/rise-by-athlon/07.webp",
+      "/projects/rise-by-athlon/08.webp",
+      "/projects/rise-by-athlon/09.webp",
+      "/projects/rise-by-athlon/10.webp",
+      "/projects/rise-by-athlon/11.webp",
+      "/projects/rise-by-athlon/12.webp"
+    ],
+    "category": "residential-podium",
+    "description": ""
+  },
+  {
+    "slug": "ata-master-plan",
+    "title": "ATA Master Plan",
+    "cover": "/projects/ata-master-plan/cover.webp",
+    "images": [
+      "/projects/ata-master-plan/01.webp",
+      "/projects/ata-master-plan/02.webp",
+      "/projects/ata-master-plan/03.webp",
+      "/projects/ata-master-plan/04.webp",
+      "/projects/ata-master-plan/05.webp"
+    ],
+    "category": "master-planning",
+    "description": ""
+  },
+  {
+    "slug": "al-fahid-terra-garden",
+    "title": "Al Fahid Terra Garden",
+    "cover": "/projects/al-fahid-terra-garden/cover.webp",
+    "images": [
+      "/projects/al-fahid-terra-garden/01.webp",
+      "/projects/al-fahid-terra-garden/02.webp",
+      "/projects/al-fahid-terra-garden/03.webp",
+      "/projects/al-fahid-terra-garden/04.webp",
+      "/projects/al-fahid-terra-garden/05.webp"
+    ],
+    "category": "residential-podium",
+    "description": ""
+  },
+  {
+    "slug": "diriyah",
+    "title": "Diriyah",
+    "cover": "/projects/diriyah/cover.webp",
+    "images": [
+      "/projects/diriyah/01.webp",
+      "/projects/diriyah/02.webp",
+      "/projects/diriyah/03.webp",
+      "/projects/diriyah/04.webp",
+      "/projects/diriyah/05.webp",
+      "/projects/diriyah/06.webp",
+      "/projects/diriyah/07.webp",
+      "/projects/diriyah/08.webp",
+      "/projects/diriyah/09.webp",
+      "/projects/diriyah/10.webp",
+      "/projects/diriyah/11.webp",
+      "/projects/diriyah/12.webp"
+    ],
+    "category": null,
+    "description": ""
+  },
+  {
+    "slug": "nyuad",
+    "title": "NYUAD",
+    "cover": "/projects/nyuad/cover.webp",
+    "images": [
+      "/projects/nyuad/01.webp",
+      "/projects/nyuad/02.webp",
+      "/projects/nyuad/03.webp",
+      "/projects/nyuad/04.webp"
+    ],
+    "category": "campus-institutional",
+    "description": ""
+  },
+  {
+    "slug": "saadiyat",
+    "title": "Saadiyat",
+    "cover": "/projects/saadiyat/cover.webp",
+    "images": [
+      "/projects/saadiyat/01.webp",
+      "/projects/saadiyat/02.webp",
+      "/projects/saadiyat/03.webp",
+      "/projects/saadiyat/04.webp",
+      "/projects/saadiyat/05.webp",
+      "/projects/saadiyat/06.webp",
+      "/projects/saadiyat/07.webp",
+      "/projects/saadiyat/08.webp"
+    ],
+    "category": null,
+    "description": ""
+  }
+]
